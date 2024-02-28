@@ -1,4 +1,4 @@
-#[allow(dead_code)]
+#![allow(dead_code)]
 #[derive(Debug)]
 struct User {
     username: String,
@@ -19,6 +19,11 @@ impl User {
 }
 
 fn main() {
-    let user = User::new(String::from("Godzilla"), String::from("monarch@gmail.com"));
-    println!("{:?}", user);
+    let mut user = User::new(
+        String::from("Godzilla"),
+        String::from("godzilla@monarch.com"),
+    );
+    user.active = true;
+    user.sign_in_count = 1;
+    println!("{:?}", user.username);
 }
