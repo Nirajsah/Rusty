@@ -26,4 +26,5 @@ fn main() {
     user.active = true;
     user.sign_in_count = 1;
     println!("{:?}", user.username);
+    println!("{:?}", user);
 }
